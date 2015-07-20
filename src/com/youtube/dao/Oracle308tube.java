@@ -8,7 +8,7 @@ public class Oracle308tube {
 	private static DataSource oracle308tube = null;
 	private static Context context = null;
 	
-	public static DataSource oracle308tubeConn() throws Exception {
+	public static DataSource Oracle308tubeConn() throws Exception {
 		if(oracle308tube != null){
 			return oracle308tube;
 		}

@@ -37,8 +37,8 @@ public class V1_status {
 		String returnString = null;
 		Connection conn = null;
 		try {
-			DataSource dataSource = Oracle308tube.oracle308tubeConn();
-			System.out.println(dataSource.toString());
+			DataSource dataSource = Oracle308tube.Oracle308tubeConn();
+			System.out.println("dataSource.toString()=> "+dataSource.toString());
 			conn = dataSource.getConnection(); // calls
 																		// the
 																		// method
@@ -56,7 +56,7 @@ public class V1_status {
 
 			// loops through the results and save it into myString
 			while (rs.next()) {
-				// /*Debug*/ System.out.println(rs.getString("DATETIME"));
+				System.out.println("Row Number " + rs.getRow() + ": "+ rs.getString("DATETIME"));
 				myString = rs.getString("DATETIME");
 			}
 			query.close(); // close connection
